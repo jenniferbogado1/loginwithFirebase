@@ -30,6 +30,11 @@ namespace FirebaseLoginCustom.Controllers
         public async Task<IActionResult> Index(string username, string password)
         {
 
+                            FirebaseAuthConfig config = new FirebaseAuthConfig();
+            config.AuthDomain = "trackermovie-10156.firebaseapp.com";
+            config.ApiKey = "AIzaSyDFezlQ68RTmss1HFnZyWFAmhjm8bstqAU";
+            config.Providers = new FirebaseAuthProvider[]
+
             
                 {
                     new GoogleProvider().AddScopes("email"),
